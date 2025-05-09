@@ -1,0 +1,6 @@
+flask
+transformers
+torch
+accelerate
+huggingface_hub
+python-dotenv
