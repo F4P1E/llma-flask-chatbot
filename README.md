@@ -1,4 +1,3 @@
-````markdown
 # 🧘‍♀️ LLaMA Flask Chatbot – Digital Wellness Assistant
 
 This is a Flask-based AI chatbot powered by Meta's **LLaMA 4 Scout 17B Instruct** model, designed to help users improve their **digital wellness**. It provides thoughtful and empathetic responses on topics like screen time, mental health, productivity, and emotional balance.
@@ -12,7 +11,6 @@ This is a Flask-based AI chatbot powered by Meta's **LLaMA 4 Scout 17B Instruct*
 - 📦 Dockerized for easy deployment
 - 🛡️ .env support for Hugging Face token
 
----
 
 ## 🛠️ Setup Instructions
 
