@@ -1,4 +1,6 @@
-from transformers import AutoTokenizer, AutoModelForCausalLM, TextGenerationPipeline
+from transformers.models.auto.tokenization_auto import AutoTokenizer
+from transformers.models.auto.modeling_auto import AutoModelForCausalLM
+from transformers.pipelines.text_generation import TextGenerationPipeline
 import os
 
 model_id = "meta-llama/Llama-4-Scout-17B-16E-Instruct"
@@ -25,4 +27,5 @@ def generate_response(prompt: str) -> str:
         - Ensure that the `pipeline` object is properly initialized before calling this function.
     """
     result = pipeline(prompt, do_sample=True, temperature=0.7)
-    return result[0]["generated_text"]
+    generated_text = result[0]["generated_text"] if isinstance(result, list) and isinstance(result[0], dict) and "generated_text" in result[0] else ""
+    return str(generated_text)
